@@ -1,0 +1,355 @@
+Leia 2 valores com uma casa decimal (x e y), que devem representar as coordenadas de um ponto em um plano. A seguir, determine qual o quadrante ao qual pertence o ponto, ou se está sobre um dos eixos cartesianos ou na origem (x = y = 0).
+
+Q2 | Q1
+__ 0 __
+Q3 | Q4
+
+Se o ponto estiver na origem, escreva a mensagem “Origem”.
+Se o ponto estiver sobre um dos eixos escreva “Eixo X” ou “Eixo Y”, conforme for a situação.
+
+Entrada
+A entrada contem as coordenadas de um ponto.
+
+Saída
+A saída deve apresentar o quadrante em que o ponto se encontra.
+==================================================================================================
+Programa:
+==================================================================================================
+using System;
+using System.Collections.Generic;
+
+namespace Exercicio_1{
+    class Program
+    {
+       public static void Main(string[] args)
+        {
+
+         string[] valor = Console.ReadLine().Split();
+
+            double x = Convert.ToDouble(valor[0]);
+            double y = Convert.ToDouble(valor[1]);
+
+            if (x == 0 && y == 0)
+            {
+                Console.Write("Origem");
+            }
+            else if (x == 0)
+            {
+                Console.WriteLine("Eixo Y");
+            }
+            else if (y == 0)
+            {
+                Console.WriteLine("Eixo X");
+            }
+            else if (x > 0 && y > 0)
+            {
+                Console.WriteLine("Q1");
+            }
+            else if (x < 0 && y > 0)
+            {
+                Console.WriteLine("Q2");
+            }
+            else if (x < 0 && y < 0)
+            {
+                Console.WriteLine("Q3");
+            }
+            else
+            {
+                Console.WriteLine("Q4");
+            }
+        }
+    }
+}
+
+================================================================================================
+Exercício 02:
+==================================================================================================
+Desafio
+Pedro trabalha sempre até tarde todos os dias, com isso tem pouco tempo tempo para as tarefas domésticas. Para economizar tempo ele faz a lista de compras do supermercado em um aplicativo e costuma anotar cada item na mesma hora que percebe a falta dele em casa.
+
+O problema é que o aplicativo não exclui itens duplicados, como Pedro anota o mesmo item mais de uma vez e a lista acaba ficando extensa. Sua tarefa é melhorar o aplicativo de notas desenvolvendo um código que exclua os itens duplicados da lista de compras e que os ordene alfabeticamente.
+
+Entrada
+A primeira linha de entrada contém um inteiro N (N < 100) com a quantidade de casos de teste que vem a seguir, ou melhor, a quantidade de listas de compras para organizar. Cada lista de compra consiste de uma única linha que contém de 1 a 1000 itens ou palavras compostas apenas de letras minúsculas (de 1 a 20 letras), sem acentos e separadas por um espaço.
+
+Saída
+A saída contém N linhas, cada uma representando uma lista de compra, sem os itens repetidos e em ordem alfabética.
+
+Programa:
+
+using System;
+using System.Collections.Generic;
+
+class MinhaClasse {
+  public static void Main (string[] args) {
+    var totalDeCasosDeTeste = int.Parse(Console.ReadLine());
+    // Implemente a solução aqui
+        
+		String[] listaComprasSemFormatacao;
+        SortedSet<string> listaComprasComFormatacao;
+
+        for (int i = 0; i < totalDeCasosDeTeste; i++)
+        {
+            listaComprasSemFormatacao = Console.ReadLine().Split(' ');
+            listaComprasComFormatacao = new SortedSet<string>(listaComprasSemFormatacao);
+
+            foreach (var n in listaComprasComFormatacao)
+            {
+                Console.Write(n);
+                Console.Write(' ');
+            }
+            listaComprasComFormatacao.Clear();
+            Console.WriteLine();
+            }
+      }
+}
+
+============================================================================================
+Exercício - 3
+
+Multiplos
+=============================================================================================
+
+using System;
+
+namespace Pink_E_Cerebro
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = int.Parse(Console.ReadLine()),
+                num, 
+                cont2 = 0, 
+                cont3 = 0, 
+                cont4 = 0, 
+                cont5 = 0;
+      
+            string[] numString = Console.ReadLine().Split();
+      
+            for (int i = 0; i < n; i++) {
+                num = int.Parse(numString[i]);
+          
+                if (num % 2 == 0) {
+                    cont2++;
+                }
+                
+                if (num % 3 == 0) {
+                    cont3++;
+                }
+                
+                if (num % 4 == 0) {
+                    cont4++;
+                }
+                
+                if (num % 5 == 0) {
+                    cont5++;
+                }
+            }
+      
+            Console.WriteLine($"{cont2} Multiplo(s) de 2\n" +
+                                $"{cont3} Multiplo(s) de 3\n" +
+                                $"{cont4} Multiplo(s) de 4\n" +
+                                $"{cont5} Multiplo(s) de 5");
+        }
+    }
+}
+
+=============================================================================================
+Desafios intermediários C#
+=============================================================================================
+/*Leia 3 valores reais (A, B e C) e verifique se eles formam ou não um triângulo. Em caso positivo, calcule o perímetro do triângulo e apresente a mensagem:
+
+
+Perimetro = XX.X
+
+
+Em caso negativo, calcule a área do trapézio que tem A e B como base e C como altura, mostrando a mensagem
+
+
+Area = XX.X
+
+Entrada
+A entrada contém três valores reais.
+
+Saída
+O resultado deve ser apresentado com uma casa decimal.
+*/
+
+using System; 
+
+class minhaClasse {
+
+    static void Main(string[] args) { 
+
+            double a, b, c;
+            string[] valor = Console.ReadLine().Split();
+            a = Convert.ToDouble(valor[0]);
+            b = Convert.ToDouble(valor[1]);
+            c = Convert.ToDouble(valor[2]);
+
+            if((a<b+c) && (b<a+c) && (c<a+b)) {
+                double p = a + b + c;
+                 Console.WriteLine("Perimetro = {0:0.0}", p);
+              }
+            else {
+            double area = ((a + b) * c) / 2;
+            Console.WriteLine("Area = {0:0.0}", area);
+              }
+    }
+
+}
+
+=================================================================================================
+Desafios Intermediários C#
+==================================================================================================
+
+/*
+Leia um valor de ponto flutuante com duas casas decimais. Este valor representa
+]um valor monetário. A seguir, calcule o menor número de notas e moedas
+possíveis no qual o valor pode ser decomposto. As notas consideradas são de
+100, 50, 20, 10, 5, 2. As moedas possíveis são de 1, 0.50, 0.25, 0.10, 0.05 e
+0.01. A seguir mostre a relação de notas necessárias.
+- Entrada
+O arquivo de entrada contém um valor de ponto flutuante N (0 ≤ N ≤ 1000000.00).
+- Saída
+Imprima a quantidade mínima de notas e moedas necessárias para trocar o valor
+inicial, conforme exemplo fornecido.
+Obs: Utilize ponto (.) para separar a parte decimal.
+*/
+
+using System; 
+using System.Globalization;
+
+class minhaClasse {
+    static void Main(string[] args) { 
+        decimal valor;
+
+        valor = decimal.Parse(Console.ReadLine());
+
+        Console.WriteLine("NOTAS:");
+        Console.WriteLine("{0} nota(s) de R$ 100.00", (int) valor / 100);
+
+        valor = valor % 100;
+        Console.WriteLine("{0} nota(s) de R$ 50.00", (int) valor / 50);
+
+        valor = valor % 50;
+        Console.WriteLine("{0} nota(s) de R$ 20.00", (int) valor / 20);
+
+        valor = valor % 20;
+        Console.WriteLine("{0} nota(s) de R$ 10.00", (int) valor / 10);
+
+        valor = valor % 10;
+        Console.WriteLine("{0} nota(s) de R$ 5.00", (int) valor / 5);
+
+        valor = valor % 5;
+        Console.WriteLine("{0} nota(s) de R$ 2.00", (int) valor / 2);
+
+        valor = valor % 2;
+        valor = valor * 100;
+
+        Console.WriteLine("MOEDAS:");
+        Console.WriteLine("{0} moeda(s) de R$ 1.00", (int)valor / 100);
+
+        valor = valor % 100;
+        Console.WriteLine("{0} moeda(s) de R$ 0.50", (int)valor / 50);
+
+        valor = valor % 50;
+        Console.WriteLine("{0} moeda(s) de R$ 0.25", (int)valor / 25);
+
+        valor = valor % 25;
+        Console.WriteLine("{0} moeda(s) de R$ 0.10", (int)valor / 10);
+
+        valor = valor % 10;
+        Console.WriteLine("{0} moeda(s) de R$ 0.05", (int)valor / 5);
+
+        valor = valor % 5;
+        Console.WriteLine("{0} moeda(s) de R$ 0.01", (int)valor);
+    }
+}
+
+================================================================================================== Teorema da Divisão Euclidiana
+==================================================================================================
+/*
+Você recebeu desafio de desenvolver um programa que calcule o quociente e o
+resto da divisão de dois números inteiros. Não se esqueça que o quociente e o
+resto da divisão de um inteiro a por um inteiro não-nulo b são respectivamente
+os únicos inteiros q e r tais que:
+0 ≤ r < |b|
+Se r < 0: r = r - |b|
+a = b × q + r
+q = ( a - r ) / b
+Caso você não saiba, o teorema que garante a existência e a unicidade dos
+inteiros q e r é conhecido como ‘Teorema da Divisão Euclidiana’ ou ‘Algoritmo
+da Divisão’.
+**  |b| (Módulo / Valor absoluto): É o valor representado de forma positiva;
+- Entrada
+A entrada é composta por dois números inteiros a e b (-1.000 ≤ a, b < 1.000).
+- Saída
+Imprima o quociente q seguido pelo resto r da divisão de a por b, considerando
+as regras apresentadas a cima.
+*/
+
+using System; 
+
+class minhaClasse {
+    static void Main(string[] args) { 
+        string[] valores = Console.ReadLine().Split();
+        int a = int.Parse(valores[0]);
+        int b = int.Parse(valores[1]);
+        int q, r;
+            
+        q= a / b;
+        r= (a % b);
+            
+        if (r<0) {
+            double  q1, r1 = 0.0;
+
+            r1 = r + Math.Sqrt(b * b);
+            q1 = (a - r1) / b;
+            Console.WriteLine("{0} {1}", q1,r1);
+        } else {
+            Console.WriteLine("{0} {1}", q,r);
+        }
+    }
+}
+
+=================================================================================================
+// Fórmula de Bhaskara
+=================================================================================================
+/*
+Leia 3 valores de ponto flutuante e efetue o cálculo das raízes da equação de
+Bhaskara. Se não for possível calcular as raízes, mostre a mensagem
+correspondente “Impossivel calcular”, caso haja uma divisão por 0 ou raiz de
+número negativo.
+- Entrada
+Leia três valores de ponto flutuante (double) A, B e C.
+- Saída
+Se não houver possibilidade de calcular as raízes, apresente a mensagem
+"Impossivel calcular". Caso contrário, imprima o resultado das raízes com 5
+dígitos após o ponto, com uma mensagem correspondente conforme exemplo abaixo.
+Imprima sempre o final de linha após cada mensagem.
+*/
+
+using System; 
+
+class minhaClasse {
+    static void Main(string[] args) { 
+        double a, b, c, delta, r1, r2;
+        string[] valor = Console.ReadLine().Split();
+
+        a = Convert.ToDouble(valor[0]);
+        b = Convert.ToDouble(valor[1]);
+        c = Convert.ToDouble(valor[2]);
+        delta = (Math.Pow(b, 2) - (4 * a * c));
+        r1 = (-b + Math.Sqrt(delta)) / (2 * a);
+        r2 = (-b - Math.Sqrt(delta)) / (2 * a);
+
+        if (a != 0 && delta > 0) {
+            Console.WriteLine($"R1 = {r1.ToString("F5")}");
+            Console.WriteLine($"R2 = {r2.ToString("F5")}");
+        } else {
+            Console.WriteLine("Impossivel calcular");
+        }
+    }
+}

@@ -1,0 +1,8 @@
+[0m2021.02.10 23:08:10 INFO  Started: Metals version 0.9.10 in workspace 'C:\workspace\Arquivos-Curso\DioDotNet' for client vscode 1.53.1.[0m
+[0m2021.02.10 23:08:14 INFO  time: initialize in 4.18s[0m
+[0m2021.02.10 23:08:22 WARN  Build server is not auto-connectable.[0m
+[0m2021.02.10 23:08:22 WARN  no build tool detected in workspace 'C:\workspace\Arquivos-Curso\DioDotNet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.02.12 22:17:17 INFO  Started: Metals version 0.9.10 in workspace 'C:\workspace\Arquivos-Curso\DioDotNet' for client vscode 1.53.1.[0m
+[0m2021.02.12 22:17:23 INFO  time: initialize in 5.88s[0m
+[0m2021.02.12 22:17:34 WARN  Build server is not auto-connectable.[0m
+[0m2021.02.12 22:17:34 WARN  no build tool detected in workspace 'C:\workspace\Arquivos-Curso\DioDotNet'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m

@@ -1,0 +1,13 @@
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.exe
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.deps.json
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.runtimeconfig.json
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.runtimeconfig.dev.json
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.dll
+C:\workspace\Arquivos-Curso\DioDotNet\bin\Debug\netcoreapp3.1\DioDotNet.pdb
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.csprojAssemblyReference.cache
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.AssemblyInfoInputs.cache
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.AssemblyInfo.cs
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.csproj.CoreCompileInputs.cache
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.dll
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.pdb
+C:\workspace\Arquivos-Curso\DioDotNet\obj\Debug\netcoreapp3.1\DioDotNet.genruntimeconfig.cache

@@ -1,0 +1,170 @@
+/*let i, num, par=0, imp=0, pos=0, neg=0;  
+
+   for(i = 1 ;i <= 5; i++){  
+    num=parseInt(gets()); 
+        if(num%2==0){
+          par=par+1;}
+        else{
+          imp=imp+1;}
+
+        if(num!=0){ 
+          if(num>0){
+          pos=pos+1;} }
+          
+        else{ 
+          neg=neg+1;} 
+   }
+  console.log(par+ " valor(es) par(es)");
+  console.log(imp+ " valor(es) impar(es)");
+  console.log(pos+ " valor(es) positivo(s)");
+  console.log(neg+ " valor(es) negativo(s)");*/
+  
+  numero = Array(5);
+numero[0] = gets();
+numero[1] = gets();
+numero[2] = gets();
+numero[3] = gets();
+numero[4] = gets();
+positivos = numero.filter(value => value > 0);
+negativos = numero.filter(value => value < 0);
+pares = numero.filter(value => value % 2 == 0);
+impares = numero.filter(value => value % 2 != 0);
+console.log(pares.length + " valor(es) par(es)");
+console.log(impares.length + " valor(es) impar(es)");
+console.log(positivos.length + " valor(es) positivo(s)");
+console.log(negativos.length + " valor(es) negativo(s)");
+
+===============================================================================================================
+ /* let notaCem = 0, notaCinquenta = 0, notaVinte = 0; notaDez = 0, notaCinco = 0, notaDois = 0, notaUm = 0;
+
+  let valor = parseInt(gets());
+ 
+  while (valor != 0) {
+ 
+    if (valor >= 100) {
+ 
+      valor -= 100;
+ 
+      notaCem++;
+ 
+    }
+ 
+    else if (valor >= 50) {
+ 
+      valor -= 50;
+ 
+      notaCinquenta++;
+ 
+    }
+ 
+    else if (valor >= 20) {
+ 
+      valor -= 20;
+ 
+      notaVinte++;
+ 
+    }
+ 
+    else if (valor >= 10) {
+ 
+      valor -= 10;
+ 
+      notaDez++;
+ 
+    }
+ 
+    else if (valor >= 5) {
+ 
+      valor -= 5;
+ 
+      notaCinco++;
+ 
+    }
+ 
+    else if (valor >= 2) {
+ 
+      valor -= 2;
+ 
+      notaDois++;
+ 
+    }
+ 
+    else if (valor >= 1) {
+ 
+      valor -= 1;
+ 
+      notaUm++;
+ 
+    }
+ 
+  }
+ 
+  console.log(notaCem + " nota(s) de R$ 100,00");
+ 
+  console.log(notaCinquenta + " nota(s) de R$ 50,00");
+ 
+  console.log(notaVinte + " nota(s) de R$ 20,00");
+ 
+  console.log(notaDez + " nota(s) de R$ 10,00");
+ 
+  console.log(notaCinco + " nota(s) de R$ 5,00");
+ 
+  console.log(notaDois + " nota(s) de R$ 2,00");
+ 
+  console.log(notaUm + " nota(s) de R$ 1,00");*/
+
+/**Desafio
+Faça a leitura de um valor inteiro. Em seguida, calcule o menor número de notas possíveis (cédulas) onde o valor pode ser decomposto. As notas que você deve considerar são de 100, 50, 20, 10, 5, 2 e 1. Na sequência mostre o valor lido e a relação de notas necessárias.
+Entrada
+Você receberá um valor inteiro N (0 < N < 1000000).
+Saída
+Exiba o valor lido e a quantidade mínima de notas de cada tipo necessárias, seguindo o exemplo de saída abaixo. Após cada linha deve ser imprimido o fim de linha. */
+
+let notas = [100, 50, 20, 10, 5, 2, 1];
+let numNotas = [0, 0, 0, 0, 0, 0, 0];
+let qtd = parseInt(gets());
+let r = qtd;
+
+while (r >= 1){
+  nota = notas.findIndex(value => value <= r);
+  numNotas[nota] = Math.trunc(r / notas[nota]);
+  r = r % notas[nota];
+}
+
+console.log(qtd);
+console.log(numNotas[0] + " nota(s) de R$ 100,00");
+console.log(numNotas[1] + " nota(s) de R$ 50,00");
+console.log(numNotas[2] + " nota(s) de R$ 20,00");
+console.log(numNotas[3] + " nota(s) de R$ 10,00");
+console.log(numNotas[4] + " nota(s) de R$ 5,00");
+console.log(numNotas[5] + " nota(s) de R$ 2,00");
+console.log(numNotas[6] + " nota(s) de R$ 1,00");
+
+======================================================================================================================
+Desafio
+Você deve calcular o consumo médio de um automóvel onde será informada a distância total percorrida (em Km) e o total de combustível consumido (em litros).
+
+Entrada
+Você receberá dois valores: um valor inteiro X com a distância total percorrida (em Km), e um valor real Y que representa o total de combustível consumido, com um dígito após o ponto decimal.
+
+Saída
+Exiba o valor que representa o consumo médio do automóvel (3 casas após a vírgula), incluindo no final a mensagem "km/l".
+
+===================================
+Minha abstração
+===================================
+
+let km = parseInt(gets());
+let li = parseFloat(gets());
+
+let kml = parseFloat(km / li).toFixed(3); 
+console.log(kml + "Km/l");
+==================================
+De Felipe
+==================================
+
+let X = parseInt(gets());
+let Y = parseFloat(gets());
+let consumoMedio = parseFloat(X / Y).toFixed(3);
+
+console.log(consumoMedio + " km/l");
